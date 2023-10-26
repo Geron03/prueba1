@@ -1,0 +1,44 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package abstract_1;
+
+/**
+ *
+ * @author USER
+ */
+public class Abstract_1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+        Market_1 Store1 = new Market_1("D1", 526312, "Cucuta");
+        Market_2 Store2 = new Market_2("Olimpica", 125564, "Valledupar");
+        Market_3 Store3 = new Market_3("ARA", 465645, "Bquilla");
+
+        Store1.getInformacion();
+        Store2.getInformacion();
+        Store3.getInformacion();
+        // Datos de costo de adquisición y precio de venta de productos
+        double costoComestibles = 2000;
+        double costoLimpieza = 1000;
+        double costoBebidas = 1500;
+        double costoCuidadoPersonal = 800;
+
+        double precioVentaComestibles = 3000;
+        double precioVentaLimpieza = 1500;
+        double precioVentaBebidas = 2500;
+        double precioVentaCuidadoPersonal = 1200;
+
+        // Calcular ganancias totales
+        double gananciasTotales = Store1.calcularGanancias(costoComestibles, costoLimpieza, costoBebidas, costoCuidadoPersonal,
+                precioVentaComestibles, precioVentaLimpieza, precioVentaBebidas, precioVentaCuidadoPersonal);
+        
+        System.out.println("\nGanacias totales: "+gananciasTotales+" Para supermercados "+Store1.getNombre());
+
+    }
+
+}
